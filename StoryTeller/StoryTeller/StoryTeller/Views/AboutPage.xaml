@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StoryTeller.Views.AboutPage"
+             xmlns:vm="clr-namespace:StoryTeller.ViewModels"
+             xmlns:controls="clr-namespace:StoryTeller.Layout"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource Primary}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Padding="12,12,12,12" Spacing="12">
+            <Button Text="Константин Константинопольский" Style="{StaticResource BorderlessButton}"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <controls:BorderButton Text="короткий отдых" Command="{Binding OpenWebCommand}" Grid.Column="0"/>
+                <controls:BorderButton Text="длительный отдых" Command="{Binding OpenWebCommand}" Grid.Column="2"/>
+            </Grid>
+            <controls:BorderButton Text="очки здоровья" Command="{Binding OpenWebCommand}"/>
+        </StackLayout>
+        <StackLayout BackgroundColor="{StaticResource Primary}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Padding="12,12,12,12" Spacing="12">
+    <Button Text="Константин Константинопольский" Style="{StaticResource BorderlessButton}"/>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <controls:BorderButton Text="короткий отдых" Command="{Binding OpenWebCommand}" Grid.Column="0"/>
+        <controls:BorderButton Text="длительный отдых" Command="{Binding OpenWebCommand}" Grid.Column="2"/>
+    </Grid>
+    <controls:BorderButton Text="очки здоровья" Command="{Binding OpenWebCommand}"/>
+            <controls:AbilityButton Text="сила" Modifier="+1" Value="13"/>
+            <controls:AbilityButton Text="ловкость" Modifier="+4" Value="18"/>
+            <controls:AbilityButton Text="телосложение" Modifier="+1" Value="13"/>
+            <controls:AbilityButton Text="интеллект" Modifier="+6" Value="18"/>
+            <controls:AbilityButton Text="мудрость" Modifier="+3" Value="12"/>
+            <controls:AbilityButton Text="харизма" Modifier="+0" Value="10"/>
+
+        </StackLayout>        
+    </Grid>
+
+</ContentPage>

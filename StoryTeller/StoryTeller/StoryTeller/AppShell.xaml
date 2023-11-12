@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:StoryTeller.Views"
+       Title="StoryTeller"
+       x:Class="StoryTeller.AppShell">
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+    
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="{StaticResource Foreground}" />
+                <Setter Property="Shell.TitleColor" Value="{StaticResource Foreground}" />
+                <Setter Property="Shell.DisabledColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.UnselectedColor" Value="#706C61" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource Foreground}"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#706C61"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource Foreground}"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <TabBar>
+        <ShellContent Title="Персонаж" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+        <ShellContent Title="Способности" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
+    </TabBar>
+
+    <!--
+        If you would like to navigate to this content you can do so by calling
+        await Shell.Current.GoToAsync("//LoginPage");
+    -->
+
+
+</Shell>
