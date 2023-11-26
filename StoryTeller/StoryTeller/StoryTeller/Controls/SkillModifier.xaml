@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xe="clr-namespace:XamEffects;assembly=XamEffects"
+             x:Name="this"
+             x:Class="StoryTeller.Controls.SkillModifier">
+    <xe:BorderView xe:TouchEffect.Color="{StaticResource ButtonClicked}"
+                   xe:Commands.Tap="{Binding Command}"
+                   xe:Commands.LongTap="{Binding LongCommand}"
+                   BindingContext="{x:Reference this}">
+        <Grid BackgroundColor="{StaticResource Primary}"
+              HeightRequest="44"         
+              x:Name="buttonBackground">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="32"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="7"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <Frame CornerRadius="6" Grid.Row="0" Grid.ColumnSpan="2" BackgroundColor="#997E78D2" HasShadow="False">
+                <Frame.Triggers>
+                    <DataTrigger TargetType="Frame" Binding="{Binding Proficiency}" Value="0">
+                        <Setter Property="BackgroundColor" Value="#4D706C61"/>
+                    </DataTrigger>
+                </Frame.Triggers>
+            </Frame>
+            <Frame CornerRadius="6" Grid.Row="2" Grid.ColumnSpan="2" BackgroundColor="#997E78D2" HasShadow="False">
+                <Frame.Triggers>
+                    <DataTrigger TargetType="Frame" Binding="{Binding Proficiency}" Value="0">
+                        <Setter Property="BackgroundColor" Value="#4D706C61"/>
+                    </DataTrigger>
+                </Frame.Triggers>
+            </Frame>
+            <Label VerticalOptions="Center" Grid.Row="2" HorizontalOptions="Center" FontSize="16" Padding="0,-6" TextTransform="Uppercase" Text="{Binding Value}"/>
+            <Label VerticalOptions="Center" Grid.Row="2" Grid.Column="1" TextColor="{StaticResource Primary}" HorizontalOptions="Start" FontSize="16" Padding="0,-6" Text="Пас"/>
+            <Label VerticalOptions="Center" Grid.Row="0" HorizontalOptions="Center" FontSize="16" Padding="0,-6" TextTransform="Uppercase" Text="{Binding Modifier}"/>
+            <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="1" TextColor="{StaticResource Primary}" HorizontalOptions="Start" FontSize="16" Padding="0,-6" Text="Мод"/>
+        </Grid>
+    </xe:BorderView>
+</ContentView>

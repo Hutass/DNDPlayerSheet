@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="this"
+             x:Class="StoryTeller.Controls.AbilityButton">
+    <StackLayout Orientation="Vertical"
+                     Spacing="0"
+             BindingContext="{x:Reference this}">
+        <BoxView HeightRequest="3" 
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="EndAndExpand"
+                 Color="#706C61" />
+        <Grid BackgroundColor="{StaticResource Primary}"
+              HeightRequest="56"
+              x:Name="buttonBackground">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="62"/>
+                <ColumnDefinition Width="7"/>
+                <ColumnDefinition Width="44"/>
+                <ColumnDefinition Width="7"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Left" Command="{Binding LeftSwipeCommand}" Threshold="20" Swiped="OnLeftSwiped"/>
+                <SwipeGestureRecognizer Direction="Right" Command="{Binding RightSwipeCommand}" Threshold="20" Swiped="OnRightSwiped"/>
+                <TapGestureRecognizer Command="{Binding Command}" Tapped="OnTapped"/>
+            </Grid.GestureRecognizers>
+            <Frame CornerRadius="6" Margin="0,7" Grid.Column="0" BackgroundColor="#4D706C61" HasShadow="False"/>
+            <Frame CornerRadius="6" Margin="0,7" Grid.Column="2" BackgroundColor="#4D706C61" HasShadow="False"/>
+            <Label Grid.Column="4" VerticalOptions="Center" HorizontalTextAlignment="Start" HorizontalOptions="Start" FontSize="20" Padding="0,-6" TextTransform="Uppercase" Text="{Binding Text}"/>
+            <Label Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" FontSize="28" Padding="0,-6" TextTransform="Uppercase" Text="{Binding Modifier}"/>
+            <Label Grid.Column="2" TextColor="{StaticResource Primary}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="28"  TextTransform="Uppercase" Text="{Binding Value}"/>
+        </Grid>
+        <BoxView HeightRequest="3"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="EndAndExpand"
+                 Color="#706C61" />
+
+    </StackLayout>
+</ContentView>

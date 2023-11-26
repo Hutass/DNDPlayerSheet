@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StoryTeller.Views.AboutPage"
+             xmlns:vm="clr-namespace:StoryTeller.ViewModels"
+             xmlns:controls="clr-namespace:StoryTeller.Controls"
+             xmlns:model="clr-namespace:StoryTeller.Models"  
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BindingContext>
+        <vm:CharacterViewModel />
+    </ContentPage.BindingContext>
+    <Grid>
+
+        <ScrollView>
+            <StackLayout BackgroundColor="{StaticResource Primary}"  VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Padding="16" Spacing="12">
+                <controls:RoundedButton Text="Константин Константинопольский" Command="{Binding OpenWebCommand}"/>
+                <StackLayout Orientation="Horizontal" Spacing="12" HorizontalOptions="CenterAndExpand" >
+                    <controls:BorderButton Text="короткий отдых" Command="{Binding OpenWebCommand}" WidthRequest="1000"/>
+                    <controls:BorderButton Text="длительный отдых" Command="{Binding OpenWebCommand}" WidthRequest="1000"/>
+                </StackLayout>
+                <controls:BorderButton Text="очки здоровья" Command="{Binding OpenWebCommand}"/>
+                <StackLayout Spacing="0" Margin="0,-12,0,0" BindableLayout.ItemsSource="{Binding Abilities}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout  x:DataType="model:Ability" Spacing="0" Margin="0,12,0,0">
+                                <StackLayout Orientation="Horizontal" Spacing="12" HorizontalOptions="StartAndExpand" >
+                                    <controls:AbilityButton Text="{Binding Name}" Modifier="{Binding Modifier}" Value="{Binding Value}" WidthRequest="1000" Command="{Binding RollCommand}" RightSwipeCommand="{Binding AdvantageRollCommand}" LeftSwipeCommand="{Binding DisadvantageRollCommand}"/>
+                                    <controls:AbilityModifier Modifier="+0" Value="{Binding AverageValue}" Proficiency="{Binding Proficiency}" WidthRequest="62" Command="{Binding ModifierInfoCommand}" LongCommand="{Binding ModifierChangeCommand}"/>
+                                </StackLayout>
+                                <StackLayout BindableLayout.ItemsSource="{Binding Skills}" Spacing="0">
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackLayout Orientation="Horizontal" Margin="0,12,0,0" Spacing="12" HorizontalOptions="StartAndExpand" x:DataType="model:Skill">
+                                                <controls:SkillModifier Modifier="+0" Value="{Binding AverageValue}" Proficiency="{Binding Proficiency}" WidthRequest="62" Command="{Binding ModifierInfoCommand}" LongCommand="{Binding ModifierChangeCommand}"/>
+                                                <controls:SkillButton Text="{Binding Name}" Modifier="{Binding Modifier}" WidthRequest="1000" Command="{Binding RollCommand}" RightSwipeCommand="{Binding AdvantageRollCommand}" LeftSwipeCommand="{Binding DisadvantageRollCommand}"/>
+                                            </StackLayout>
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </StackLayout>
+                            </StackLayout>
+                        </DataTemplate>
+
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        <BoxView HeightRequest="3"
+         HorizontalOptions="FillAndExpand"
+         VerticalOptions="EndAndExpand"
+         Color="#706C61" />
+        <StackLayout x:Name="RollLayout" BindableLayout.ItemsSource="{Binding Rolls}" Spacing="0" Orientation="Vertical" VerticalOptions="End" HorizontalOptions="Start" >
+            <BindableLayout.ItemTemplate>
+                <DataTemplate x:DataType="model:Roll">
+                    <controls:RollPopup Name="{Binding Name}" Advantage="{Binding Advantage}" Result="{Binding Result}" Expression="{Binding Expression}" ExpressionResult="{Binding ExpressionResult}" VerticalOptions="End" HorizontalOptions="Start"/>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

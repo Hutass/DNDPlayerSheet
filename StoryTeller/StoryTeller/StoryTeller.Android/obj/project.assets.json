@@ -3489,11 +3489,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.Android\\StoryTeller.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller.Android\\StoryTeller.Android.csproj",
       "projectName": "StoryTeller.Android",
-      "projectPath": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.Android\\StoryTeller.Android.csproj",
+      "projectPath": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller.Android\\StoryTeller.Android.csproj",
       "packagesPath": "C:\\Users\\Артем\\.nuget\\packages\\",
-      "outputPath": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.Android\\obj\\",
+      "outputPath": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3514,8 +3514,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj": {
-              "projectPath": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj"
+            "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj": {
+              "projectPath": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj"
             }
           }
         }
@@ -3528,6 +3528,14 @@
             "target": "Package",
             "version": "[1.6.3, )"
           },
+          "XamEffects": {
+            "target": "Package",
+            "version": "[1.6.3, )"
+          },
+          "Xamanimation": {
+            "target": "Package",
+            "version": "[1.3.0, )"
+          },
           "Xamanimation": {
             "target": "Package",
             "version": "[1.3.0, )"
@@ -3535,6 +3543,14 @@
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.7.0, )"
+          },
+          "Xamarin.Essentials": {
+            "target": "Package",
+            "version": "[1.7.0, )"
+          },
+          "Xamarin.Forms": {
+            "target": "Package",
+            "version": "[5.0.0.2196, )"
           },
           "Xamarin.Forms": {
             "target": "Package",

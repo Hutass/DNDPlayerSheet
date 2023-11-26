@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HcjRvdl+B1fOvMY5HzwwlXgyAwB5gJ/UEY9BVrYxvUFdC7KvxT4mUkhDBo/+pMaQCRYSCGAFub6iDVmo5PrCAA==",
+  "dgSpecHash": "DaKeAf1bR4M37khNBOZ3TxzFozeAn2WMaTCIszubGNn0kpNmDNsPfbUXjKwokLy2LPHWuL1l/jidd39A6v0nrg==",
   "success": true,
-  "projectFilePath": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.iOS\\StoryTeller.iOS.csproj",
+  "projectFilePath": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller.iOS\\StoryTeller.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Артем\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Артем\\.nuget\\packages\\xamanimation\\1.3.0\\xamanimation.1.3.0.nupkg.sha512",

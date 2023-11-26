@@ -1470,11 +1470,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.iOS\\StoryTeller.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller.iOS\\StoryTeller.iOS.csproj",
       "projectName": "StoryTeller.iOS",
-      "projectPath": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.iOS\\StoryTeller.iOS.csproj",
+      "projectPath": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller.iOS\\StoryTeller.iOS.csproj",
       "packagesPath": "C:\\Users\\Артем\\.nuget\\packages\\",
-      "outputPath": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.iOS\\obj\\",
+      "outputPath": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1495,8 +1495,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj": {
-              "projectPath": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj"
+            "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj": {
+              "projectPath": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj"
             }
           }
         }

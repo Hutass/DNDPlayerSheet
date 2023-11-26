@@ -18,14 +18,21 @@
                 <Setter Property="Shell.ForegroundColor" Value="{StaticResource Foreground}" />
                 <Setter Property="Shell.TitleColor" Value="{StaticResource Foreground}" />
                 <Setter Property="Shell.DisabledColor" Value="{StaticResource Primary}" />
-                <Setter Property="Shell.UnselectedColor" Value="#706C61" />
+                <Setter Property="Shell.UnselectedColor" Value="{StaticResource Unselected}" />
                 <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource Foreground}"/>
-                <Setter Property="Shell.TabBarUnselectedColor" Value="#706C61"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource Unselected}"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource Foreground}"/>
+                <Setter Property="Shell.NavBarIsVisible" Value="False"/>
             </Style>
-            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
-            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+            <Style x:Key="EnabledBar" TargetType="Element" BasedOn="{StaticResource BaseStyle}">
+                <Setter Property="Shell.TabBarIsVisible" Value="True"/>
+            </Style>
+            <Style x:Key="DisabledBar" TargetType="Element" BasedOn="{StaticResource BaseStyle}">
+                <Setter Property="Shell.TabBarIsVisible" Value="False"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource EnabledBar}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource EnabledBar}" />
         </ResourceDictionary>
     </Shell.Resources>
 

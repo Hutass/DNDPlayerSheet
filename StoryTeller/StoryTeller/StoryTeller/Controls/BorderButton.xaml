@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xe="clr-namespace:XamEffects;assembly=XamEffects"
+             x:Name="this"
+             x:Class="StoryTeller.Controls.BorderButton">
+    <StackLayout Orientation="Vertical"
+                         Spacing="0"
+                 BindingContext="{x:Reference this}">
+        <BoxView HeightRequest="3" 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="EndAndExpand"
+                     Color="#706C61" />
+        <Grid BackgroundColor="{StaticResource Primary}"
+      xe:TouchEffect.Color="{StaticResource ButtonClicked}"
+      xe:Commands.Tap="{Binding Command}"
+              HeightRequest="42">
+            <Label Text="{Binding Text}"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center" 
+                   FontSize="16" FontFamily="JetBrainsMono" 
+                   TextTransform="Uppercase" 
+                   TextColor="{StaticResource Foreground}"/>
+        </Grid>
+        <BoxView HeightRequest="3"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="EndAndExpand"
+                     Color="#706C61" />
+    </StackLayout>
+</ContentView>

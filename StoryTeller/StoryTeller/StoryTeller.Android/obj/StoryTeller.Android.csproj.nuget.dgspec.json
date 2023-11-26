@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.Android\\StoryTeller.Android.csproj": {}
+    "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller.Android\\StoryTeller.Android.csproj": {}
   },
   "projects": {
-    "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.Android\\StoryTeller.Android.csproj": {
+    "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller.Android\\StoryTeller.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.Android\\StoryTeller.Android.csproj",
+        "projectUniqueName": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller.Android\\StoryTeller.Android.csproj",
         "projectName": "StoryTeller.Android",
-        "projectPath": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.Android\\StoryTeller.Android.csproj",
+        "projectPath": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller.Android\\StoryTeller.Android.csproj",
         "packagesPath": "C:\\Users\\Артем\\.nuget\\packages\\",
-        "outputPath": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.Android\\obj\\",
+        "outputPath": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid13.0": {
             "projectReferences": {
-              "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj": {
-                "projectPath": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj"
+              "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj": {
+                "projectPath": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj"
               }
             }
           }
@@ -62,14 +62,14 @@
         }
       }
     },
-    "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj": {
+    "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj",
+        "projectUniqueName": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj",
         "projectName": "StoryTeller",
-        "projectPath": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj",
+        "projectPath": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj",
         "packagesPath": "C:\\Users\\Артем\\.nuget\\packages\\",
-        "outputPath": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller\\obj\\",
+        "outputPath": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

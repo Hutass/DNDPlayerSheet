@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="this"
+             x:Class="StoryTeller.Controls.SkillButton">
+    <StackLayout Orientation="Vertical"
+                 Spacing="0"
+         BindingContext="{x:Reference this}">
+        <Grid BackgroundColor="{StaticResource Primary}"
+          HeightRequest="44">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="12"/>
+                <ColumnDefinition Width="62"/>
+            </Grid.ColumnDefinitions>
+            <Grid.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Left" Command="{Binding LeftSwipeCommand}" Threshold="20" Swiped="OnLeftSwiped"/>
+                <SwipeGestureRecognizer Direction="Right" Command="{Binding RightSwipeCommand}" Threshold="20" Swiped="OnRightSwiped"/>
+                <TapGestureRecognizer Command="{Binding Command}" Tapped="OnTapped">
+                </TapGestureRecognizer>
+            </Grid.GestureRecognizers>
+            <Frame x:Name="buttonBackground" Grid.ColumnSpan="3" CornerRadius="6" BackgroundColor="{StaticResource Primary}" HasShadow="False"/>
+            <Frame CornerRadius="6" Grid.Column="2" BackgroundColor="#4D706C61" HasShadow="False"/>
+            <Label VerticalOptions="Center" HorizontalTextAlignment="End" HorizontalOptions="End" Grid.Column="0" FontSize="20" Padding="0,-6" TextTransform="Uppercase" Text="{Binding Text}"/>
+            <Label Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" FontSize="28" Padding="-6" TextTransform="Uppercase" Text="{Binding Modifier}"/>
+        </Grid>
+    </StackLayout>
+</ContentView>

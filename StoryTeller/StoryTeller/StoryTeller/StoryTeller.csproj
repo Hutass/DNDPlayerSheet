@@ -22,10 +22,34 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Layout\AbilityButton.xaml">
+    <Compile Update="Controls\RoundedButton.xaml.cs">
+      <DependentUpon>RoundedButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CharacterPage.xaml.cs">
+      <DependentUpon>CharacterPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Controls\AbilityButton.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Layout\BorderButton.xaml">
+    <EmbeddedResource Update="Controls\AbilityModifier.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\BorderButton.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\RollPopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\RoundedButton.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\SkillButton.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\SkillModifier.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

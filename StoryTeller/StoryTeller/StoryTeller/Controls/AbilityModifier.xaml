@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xe="clr-namespace:XamEffects;assembly=XamEffects"
+             x:Name="this"
+             x:Class="StoryTeller.Controls.AbilityModifier">
+    <StackLayout Orientation="Vertical"
+                 Spacing="0"
+         BindingContext="{x:Reference this}">
+        <BoxView HeightRequest="3" 
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="EndAndExpand"
+             Color="#706C61" />
+        <Grid BackgroundColor="{StaticResource Primary}"
+          HeightRequest="56"         
+          x:Name="buttonBackground"
+              xe:TouchEffect.Color="{StaticResource ButtonClicked}"
+              xe:Commands.Tap="{Binding Command}"
+              xe:Commands.LongTap="{Binding LongCommand}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="32"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="7"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="7"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="7"/>
+            </Grid.RowDefinitions>
+
+            <Frame CornerRadius="6" Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="#997E78D2" HasShadow="False">
+                <Frame.Triggers>
+                    <DataTrigger TargetType="Frame" Binding="{Binding Proficiency}" Value="0">
+                        <Setter Property="BackgroundColor" Value="#4D706C61"/>
+                    </DataTrigger>
+                </Frame.Triggers>
+            </Frame>
+            <Frame CornerRadius="6" Grid.Row="3" Grid.ColumnSpan="2" BackgroundColor="#997E78D2" HasShadow="False">
+                <Frame.Triggers>
+                    <DataTrigger TargetType="Frame" Binding="{Binding Proficiency}" Value="0">
+                        <Setter Property="BackgroundColor" Value="#4D706C61"/>
+                    </DataTrigger>
+                </Frame.Triggers>
+            </Frame>
+            <Label VerticalOptions="Center" Grid.Row="3" HorizontalOptions="Center" FontSize="16" Padding="0,-6" TextTransform="Uppercase" Text="{Binding Value}"/>
+            <Label VerticalOptions="Center" Grid.Row="3" Grid.Column="1" TextColor="{StaticResource Primary}" HorizontalOptions="Start" FontSize="16" Padding="0,-6" Text="Пас"/>
+            <Label VerticalOptions="Center" Grid.Row="1" HorizontalOptions="Center" FontSize="16" Padding="0,-6" TextTransform="Uppercase" Text="{Binding Modifier}"/>
+            <Label VerticalOptions="Center" Grid.Row="1" Grid.Column="1" TextColor="{StaticResource Primary}" HorizontalOptions="Start" FontSize="16" Padding="0,-6" Text="Мод"/>
+            
+        </Grid>
+        <BoxView HeightRequest="3"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="EndAndExpand"
+             Color="#706C61" />
+
+    </StackLayout>
+</ContentView>

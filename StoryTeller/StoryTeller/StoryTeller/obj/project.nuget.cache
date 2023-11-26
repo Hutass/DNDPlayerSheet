@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/ljLtORGCS7vCtYmx50kHkkYRlFTtUZwXeZGnco+UHO0/py3x1dFemJCb0SX4sgoHvLByj/QOiCy2DWlPKoBbw==",
+  "dgSpecHash": "iL0RBKD1WhKJob13EOAYEuSYM76FQkA235ttWW2X0ew672mHVhix2ELo31WscLB726b/+d5taNNYZVd/bJWk7g==",
   "success": true,
-  "projectFilePath": "D:\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj",
+  "projectFilePath": "C:\\Users\\Артем\\source\\repos\\DNDPlayerSheet\\StoryTeller\\StoryTeller\\StoryTeller\\StoryTeller.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Артем\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Артем\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
