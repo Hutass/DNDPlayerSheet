@@ -17,13 +17,17 @@ namespace StoryTeller.ViewModels
         public ItemsViewModel()
         {
             Title = "Броски";
-            Rolls = new ObservableCollection<Roll>(RollStore.GetItemsAsync().Result);
+            Init();
             RollStore.GetItems += SetRolls;
         }
-
-        async void SetRolls(ObservableCollection<Roll> rolls)
+        async void Init()
+        {
+            Rolls = new ObservableCollection<Roll>(await RollStore.GetItemsAsync()); ;
+        }
+        void SetRolls(ObservableCollection<Roll> rolls)
         {
             Rolls = rolls;
+            OnPropertyChanged(nameof(Rolls));
         }
      
     }

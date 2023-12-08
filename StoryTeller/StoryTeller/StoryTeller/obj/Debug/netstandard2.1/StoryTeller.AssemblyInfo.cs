@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StoryTeller")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b05dc7bbe518366da4104514e3465e4b14468b0b")]
 [assembly: System.Reflection.AssemblyProductAttribute("StoryTeller")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StoryTeller")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -15,6 +15,7 @@ namespace StoryTeller.Services
 
         public RollDataStore()
         {
+            rolls = new ObservableCollection<Roll>();
             firebaseClient = new FirebaseClient("https://storyteller-dnd-default-rtdb.europe-west1.firebasedatabase.app");
             firebaseClient.
                 Child("Rolls").
@@ -29,7 +30,7 @@ namespace StoryTeller.Services
                 });
         }
 
-        public ObservableCollection<Roll> rolls { get; set; } = new ObservableCollection<Roll>();
+        public ObservableCollection<Roll> rolls { get; set; }
 
         private Firebase.Database.FirebaseClient firebaseClient;
 
