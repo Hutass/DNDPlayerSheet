@@ -1,4 +1,5 @@
-﻿using StoryTeller.Services;
+﻿using StoryTeller.Models;
+using StoryTeller.Services;
 using StoryTeller.Views;
 using System;
 using Xamarin.Forms;
@@ -13,7 +14,9 @@ namespace StoryTeller
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            RollDataStore rollDataStore = new RollDataStore();
+            DependencyService.RegisterSingleton<RollDataStore>(rollDataStore);
+            DependencyService.Get<IDataStore<Roll>>();
             MainPage = new AppShell();
         }
 

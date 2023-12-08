@@ -16,7 +16,7 @@
             <RowDefinition Height="7"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Frame HasShadow="False" Grid.ColumnSpan="5" Grid.RowSpan="3" CornerRadius="8" BackgroundColor="#706C61">
+        <Frame HasShadow="False" Grid.ColumnSpan="5" Grid.RowSpan="3" CornerRadius="6" BackgroundColor="#706C61">
             <Frame.Triggers>
                 <DataTrigger TargetType="Frame" Binding="{Binding Advantage}" Value="1">
                     <Setter Property="BackgroundColor" Value="#FF7E78D2"/>
@@ -26,8 +26,8 @@
                 </DataTrigger>
             </Frame.Triggers>
         </Frame>
-        <Frame HasShadow="False" Grid.ColumnSpan="5" Grid.RowSpan="3" Margin="3,3.5" CornerRadius="6" BackgroundColor="{StaticResource Primary}"/>
-        <Frame CornerRadius="6" Margin="0" Grid.Column="4" Grid.RowSpan="3" BackgroundColor="#4D706C61" HasShadow="False"/>
+        <Frame HasShadow="False" Grid.ColumnSpan="5" Grid.RowSpan="3" Margin="3,3.5" CornerRadius="4" BackgroundColor="{StaticResource Primary}"/>
+        <Frame CornerRadius="4" Margin="0" Grid.Column="4" Grid.RowSpan="3" BackgroundColor="#4D706C61" HasShadow="False"/>
         <Label Grid.Column="4" Grid.RowSpan="3" VerticalOptions="Center" HorizontalOptions="Center" FontSize="28"  TextTransform="Uppercase" Text="{Binding Result}"/>
         <Label Grid.Column="0" Grid.RowSpan="3" VerticalOptions="Center" HorizontalOptions="End" HorizontalTextAlignment="End" FontSize="16" Padding="0,-6" TextTransform="Default" Text="{Binding Name}"/>
         <Label Grid.Column="2" Grid.Row="0" VerticalOptions="End" HorizontalOptions="Center" FontSize="16" Padding="0,-6" TextTransform="Default" Text="{Binding ExpressionResult}"/>

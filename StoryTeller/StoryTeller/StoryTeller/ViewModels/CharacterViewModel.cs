@@ -1,7 +1,9 @@
 ﻿using StoryTeller.Models;
+using StoryTeller.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,12 +15,15 @@ namespace StoryTeller.ViewModels
 {
     public class CharacterViewModel : BaseViewModel
     {
+        public string Name { get; set; }
         public ObservableCollection<Ability> Abilities { get; set; }
         public ObservableCollection<Roll> Rolls { get; set; }
+        public IDataStore<Roll> RollStore => DependencyService.Get<IDataStore<Roll>>();
         public CharacterViewModel()
         {
+            Name = "Константин Константинопольский";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
-            Abilities = new ObservableCollection<Ability>();
+            Abilities = new ObservableCollection<Ability>();           
             Rolls = new ObservableCollection<Roll>();
 
             int proficiencyModifier = 2;
@@ -234,8 +239,10 @@ namespace StoryTeller.ViewModels
                         Result = (value + Convert.ToInt32(a.Modifier)).ToString(),
                         Expression = "1d20" + a.Modifier,
                         ExpressionResult = "(" + value + ")" + a.Modifier,
+                        Character = Name,
                     };
                     Rolls.Add(roll);
+                    await RollStore.AddItemAsync(roll);
                     await Task.Delay(7500);
                     Rolls.Remove(roll);
                 });
@@ -250,8 +257,10 @@ namespace StoryTeller.ViewModels
                         Result = (Math.Max(value1, value2) + Convert.ToInt32(a.Modifier)).ToString(),
                         Expression = "1d20↑" + a.Modifier,
                         ExpressionResult = "(" + value1+","+value2 + ")" + a.Modifier,
+                        Character = Name,
                     };
                     Rolls.Add(roll);
+                    await RollStore.AddItemAsync(roll);
                     await Task.Delay(7500);
                     Rolls.Remove(roll);
                 });
@@ -266,8 +275,10 @@ namespace StoryTeller.ViewModels
                         Result = (Math.Min(value1, value2) + Convert.ToInt32(a.Modifier)).ToString(),
                         Expression = "1d20↓" + a.Modifier,
                         ExpressionResult = "(" + value1 + "," + value2 + ")" + a.Modifier,
+                        Character = Name,
                     };
                     Rolls.Add(roll);
+                    await RollStore.AddItemAsync(roll);
                     await Task.Delay(7500);
                     Rolls.Remove(roll);
                 });
@@ -282,9 +293,11 @@ namespace StoryTeller.ViewModels
                             Name = s.Name,
                             Result = (value + Convert.ToInt32(s.Modifier)).ToString(),
                             Expression = "1d20" + s.Modifier,
-                            ExpressionResult = "(" + value + ")" + s.Modifier
+                            ExpressionResult = "(" + value + ")" + s.Modifier,
+                            Character = Name,
                         };
                         Rolls.Add(roll);
+                        await RollStore.AddItemAsync(roll);
                         await Task.Delay(7500);
                         Rolls.Remove(roll);
                     });
@@ -299,8 +312,10 @@ namespace StoryTeller.ViewModels
                             Result = (Math.Max(value1, value2) + Convert.ToInt32(s.Modifier)).ToString(),
                             Expression = "1d20↑" + s.Modifier,
                             ExpressionResult = "(" + value1 + "," + value2 + ")" + s.Modifier,
+                            Character = Name,
                         };
                         Rolls.Add(roll);
+                        await RollStore.AddItemAsync(roll);
                         await Task.Delay(7500);
                         Rolls.Remove(roll);
                     });
@@ -315,8 +330,10 @@ namespace StoryTeller.ViewModels
                             Result = (Math.Min(value1, value2) + Convert.ToInt32(s.Modifier)).ToString(),
                             Expression = "1d20↓" + s.Modifier,
                             ExpressionResult = "(" + value1 + "," + value2 + ")" + s.Modifier,
+                            Character = Name,
                         };
                         Rolls.Add(roll);
+                        await RollStore.AddItemAsync(roll);
                         await Task.Delay(7500);
                         Rolls.Remove(roll);
                     });

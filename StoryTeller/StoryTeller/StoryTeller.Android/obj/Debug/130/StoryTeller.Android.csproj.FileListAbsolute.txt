@@ -1300,3 +1300,8 @@ C:\Users\Артем\Source\Repos\DNDPlayerSheet\StoryTeller\StoryTeller\StoryTel
 C:\Users\Артем\Source\Repos\DNDPlayerSheet\StoryTeller\StoryTeller\StoryTeller.Android\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\Артем\Source\Repos\DNDPlayerSheet\StoryTeller\StoryTeller\StoryTeller.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Артем\Source\Repos\DNDPlayerSheet\StoryTeller\StoryTeller\StoryTeller.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Артем\source\repos\DNDPlayerSheet\StoryTeller\StoryTeller\StoryTeller.Android\obj\Debug\130\android\assets\Firebase.dll
+C:\Users\Артем\source\repos\DNDPlayerSheet\StoryTeller\StoryTeller\StoryTeller.Android\obj\Debug\130\android\assets\LiteDB.dll
+C:\Users\Артем\source\repos\DNDPlayerSheet\StoryTeller\StoryTeller\StoryTeller.Android\obj\Debug\130\android\assets\Newtonsoft.Json.dll
+C:\Users\Артем\source\repos\DNDPlayerSheet\StoryTeller\StoryTeller\StoryTeller.Android\obj\Debug\130\android\assets\System.Reactive.dll
+C:\Users\Артем\source\repos\DNDPlayerSheet\StoryTeller\StoryTeller\StoryTeller.Android\obj\Debug\130\android\assets\System.Runtime.InteropServices.WindowsRuntime.dll

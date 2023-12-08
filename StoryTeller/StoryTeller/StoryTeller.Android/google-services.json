@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1051142722298",
+    "project_id": "storyteller-dnd",
+    "storage_bucket": "storyteller-dnd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1051142722298:android:512ad8e5d2c5ec310d6f43",
+        "android_client_info": {
+          "package_name": "com.companyname.storyteller"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6-a-cSE_L6hvK-xLiNzruIjhqJ20PfyA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

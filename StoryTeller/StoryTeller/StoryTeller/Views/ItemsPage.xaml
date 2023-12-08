@@ -2,43 +2,62 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="StoryTeller.Views.ItemsPage"
-             Title="{Binding Title}"
-             xmlns:local="clr-namespace:StoryTeller.ViewModels"  
+               xmlns:controls="clr-namespace:StoryTeller.Controls"
+             xmlns:vm="clr-namespace:StoryTeller.ViewModels"            
              xmlns:model="clr-namespace:StoryTeller.Models"  
-             x:Name="BrowseItemsPage">
+             x:Name="BrowseItemsPage"
+             NavigationPage.HasNavigationBar="False">
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
-    </ContentPage.ToolbarItems>
+    <ContentPage.BindingContext>
+        <vm:ItemsViewModel />
+    </ContentPage.BindingContext>
     <!--
       x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
       https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
     -->
-    <RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
-        <CollectionView x:Name="ItemsListView"
-                ItemsSource="{Binding Items}"
-                SelectionMode="None">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout Padding="10" x:DataType="model:Item">
-                        <Label Text="{Binding Text}" 
-                            LineBreakMode="NoWrap" 
-                            Style="{DynamicResource ListItemTextStyle}" 
-                            FontSize="16" />
-                        <Label Text="{Binding Description}" 
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer 
-                                NumberOfTapsRequired="1"
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"		
-                                CommandParameter="{Binding .}">
-                            </TapGestureRecognizer>
-                        </StackLayout.GestureRecognizers>
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </RefreshView>
+    <Grid>
+
+        <ScrollView Padding="12" Grid.ColumnSpan="5" Grid.RowSpan="3">
+            <StackLayout x:Name="RollLayout" BindableLayout.ItemsSource="{Binding Rolls}" Spacing="0" >
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate x:DataType="model:Roll">
+                        <Grid HeightRequest="54" Margin="0,0,0,8" VerticalOptions="Start"  >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="7"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="62"/>
+                                <ColumnDefinition Width="7"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="7"/>
+                                <ColumnDefinition Width="1.3*"/>
+                            </Grid.ColumnDefinitions>
+                            <Frame CornerRadius="0" HasShadow="False" Grid.ColumnSpan="5" Grid.RowSpan="3" BackgroundColor="#706C61">
+                                <Frame.Triggers>
+                                    <DataTrigger TargetType="Frame" Binding="{Binding Advantage}" Value="1">
+                                        <Setter Property="BackgroundColor" Value="#FF7E78D2"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Frame" Binding="{Binding Advantage}" Value="2">
+                                        <Setter Property="BackgroundColor" Value="#FFF24236"/>
+                                    </DataTrigger>
+                                </Frame.Triggers>
+                            </Frame>
+                            <Frame CornerRadius="0" HasShadow="False" Grid.ColumnSpan="5" Grid.RowSpan="3" Margin="-1,3" BackgroundColor="{StaticResource Primary}"/>
+                            <Frame CornerRadius="6" Margin="0" Grid.Column="0" Grid.RowSpan="3" BackgroundColor="#4D706C61" HasShadow="False"/>
+                            <Label Grid.Column="0" Grid.RowSpan="3" VerticalOptions="Center" HorizontalOptions="Center" FontSize="28"  TextTransform="Uppercase" Text="{Binding Result}"/>
+                            <Label Grid.Column="4" Grid.RowSpan="3" VerticalOptions="Center" HorizontalOptions="Start" HorizontalTextAlignment="Start" FontSize="16" Padding="0,-6" TextTransform="Default" Text="{Binding Name}"/>
+                            <Label Grid.Column="2" Grid.Row="0" VerticalOptions="End" HorizontalOptions="Center" FontSize="16" Padding="0,-6" TextTransform="Default" Text="{Binding ExpressionResult}"/>
+                            <Label Grid.Column="2" Grid.Row="2" VerticalOptions="Start" HorizontalOptions="Center" FontSize="16" Padding="0,-6" TextTransform="Default" Text="{Binding Expression}"/>
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>
+        <BoxView Grid.ColumnSpan="5" Grid.Row="2" HeightRequest="3"
+  HorizontalOptions="FillAndExpand"
+  VerticalOptions="EndAndExpand"
+  Color="#706C61" />
+    </Grid>
 </ContentPage>

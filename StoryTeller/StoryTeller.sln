@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryTeller.Android", "Stor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryTeller.iOS", "StoryTeller\StoryTeller.iOS\StoryTeller.iOS.csproj", "{7390C0F9-7635-46D8-B5D5-588837F9CD50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryTeller", "StoryTeller\StoryTeller\StoryTeller.csproj", "{596D9F70-31D3-4479-9F1E-0762B9A8B810}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoryTeller", "StoryTeller\StoryTeller\StoryTeller.csproj", "{596D9F70-31D3-4479-9F1E-0762B9A8B810}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

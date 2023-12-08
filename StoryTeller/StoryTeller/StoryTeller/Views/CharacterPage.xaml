@@ -14,7 +14,7 @@
 
         <ScrollView>
             <StackLayout BackgroundColor="{StaticResource Primary}"  VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Padding="16" Spacing="12">
-                <controls:RoundedButton Text="Константин Константинопольский" Command="{Binding OpenWebCommand}"/>
+                <controls:RoundedButton Text="{Binding Name}" Command="{Binding OpenWebCommand}"/>
                 <StackLayout Orientation="Horizontal" Spacing="12" HorizontalOptions="CenterAndExpand" >
                     <controls:BorderButton Text="короткий отдых" Command="{Binding OpenWebCommand}" WidthRequest="1000"/>
                     <controls:BorderButton Text="длительный отдых" Command="{Binding OpenWebCommand}" WidthRequest="1000"/>
@@ -40,7 +40,6 @@
                                 </StackLayout>
                             </StackLayout>
                         </DataTemplate>
-
                     </BindableLayout.ItemTemplate>
                 </StackLayout>
             </StackLayout>
